@@ -47,10 +47,6 @@
             margin-bottom: 30px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.15);
         }
-        video {
-            width: 100%;
-            display: block;
-        }
         /* 新增：照片墙排版样式 */
         .photo-gallery {
             display: grid;
@@ -138,17 +134,16 @@
             <h1>🥁 扬扬 - 江西省打击乐比赛现场</h1>
         </div>
 
-       <div class="video-wrapper">
-            <iframe src="//player.bilibili.com/player.html?aid=<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=116974575159812&bvid=BV1xxgv6BE8D&cid=40257520990&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="450"></iframe>
+        <!-- 修改后的 B站 视频嵌入代码 -->
+        <div class="video-wrapper" style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
+            <iframe src="https://player.bilibili.com/player.html?bvid=BV1xxgv6BE8D&page=1&high_quality=1&danmaku=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;"></iframe>
         </div>
 
-        <!-- 新增：比赛精彩瞬间照片墙 -->
+        <!-- 比赛精彩瞬间照片墙 -->
         <div class="review-section">
             <h2>📸 比赛精彩瞬间</h2>
             <div class="photo-gallery">
-                <!-- yy1.jpg 为横拍，使用 photo-landscape 类，占满全宽 -->
                 <img src="yy1.jpg" alt="比赛现场横拍" class="photo-landscape">
-                <!-- yy2.jpg 和 yy3.jpg 为竖拍，使用 photo-portrait 类，并排显示 -->
                 <img src="yy2.jpg" alt="比赛现场竖拍照片1" class="photo-portrait">
                 <img src="yy3.jpg" alt="比赛现场竖拍照片2" class="photo-portrait">
             </div>
