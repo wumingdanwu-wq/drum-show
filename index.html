@@ -51,6 +51,32 @@
             width: 100%;
             display: block;
         }
+        /* 新增：照片墙排版样式 */
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        .photo-landscape {
+            grid-column: 1 / -1; /* 横图占满两列 */
+            width: 100%;
+            border-radius: 8px;
+            object-fit: cover;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .photo-portrait {
+            width: 100%;
+            border-radius: 8px;
+            object-fit: cover;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .photo-gallery img:hover {
+            transform: scale(1.02);
+        }
+        
         .review-section {
             margin-bottom: 25px;
         }
@@ -119,6 +145,18 @@
             </video>
         </div>
 
+        <!-- 新增：比赛精彩瞬间照片墙 -->
+        <div class="review-section">
+            <h2>📸 比赛精彩瞬间</h2>
+            <div class="photo-gallery">
+                <!-- yy1.jpg 为横拍，使用 photo-landscape 类，占满全宽 -->
+                <img src="yy1.jpg" alt="比赛现场横拍" class="photo-landscape">
+                <!-- yy2.jpg 和 yy3.jpg 为竖拍，使用 photo-portrait 类，并排显示 -->
+                <img src="yy2.jpg" alt="比赛现场竖拍照片1" class="photo-portrait">
+                <img src="yy3.jpg" alt="比赛现场竖拍照片2" class="photo-portrait">
+            </div>
+        </div>
+
         <div class="review-section">
             <h2>1. 律动与节奏感（Groove & Timing）—— 表现优秀，内心节拍器稳</h2>
             <p>《Baked Potato》这首曲子带有明显的 Funky 和 Pop-Rock 风格，难点在于保持律动感的同时，还要处理好底鼓（Kick）和军鼓（Snare）的错位配合。扬扬的节奏把控非常出色，整首曲子速度保持得很均匀，没有出现初学者常见的“越打越快（赶拍）”或“过门后拖拍”的问题。这种稳定的内心节拍感是他非常宝贵的天赋和苦练的成果。</p>
@@ -131,7 +169,7 @@
             </ul>
 
             <h2>3. 台风与舞台素质（Stage Presence）—— 专注且自信</h2>
-            <p>在江西省打击乐比赛这样的大型专业舞台上，面对台下的评委和观众，很多小选手会怯场或眼神游移。但扬扬的眼神非常专注，全程紧盯谱面或自己的打击区域，完全沉浸在演奏中。这种“不受外界干扰”的心理素质，对于乐手来说尤为重要。</p>
+            <p>在江西省打击乐比赛这样的大型专业舞台上，面对台下的评委和观众，很多小选手会怯场或眼神游移。但多多的眼神非常专注，全程紧盯谱面或自己的打击区域，完全沉浸在演奏中。这种“不受外界干扰”的心理素质，对于乐手来说尤为重要。</p>
         </div>
 
         <div class="advice-box">
